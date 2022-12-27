@@ -13,25 +13,23 @@ export default function Header() {
   
   return (
     <header>
-      <div className="container-bar">
-        <span>
-          tech-opportunity
-        </span>
-        <nav className="nav-menu">
-          <ul>
-            {pages.map(page => {
-              const path = `/${page.toLowerCase()}`
-              const isHovered = hovered === path
-              console.log(path)
-              return(
-                <li key={page}>
-                  <a href={path}>{page}</a>
-                </li>  
-              )
-            })}
-          </ul>
-        </nav>
-      </div>
+      <span>
+        tech-opportunity
+      </span>
+      <nav>
+        <ul>
+          {pages.map(page => {
+            const path = `/${page.toLowerCase()}`
+            const isHovered = hovered === path
+            console.log(path)
+            return(
+              <li key={page}>
+                <a href={path}>{page}</a>
+              </li>  
+            )
+          })}
+        </ul>
+      </nav>
     </header>
   );
 }
